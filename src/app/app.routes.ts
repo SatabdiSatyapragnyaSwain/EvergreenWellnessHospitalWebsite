@@ -31,10 +31,10 @@ import { SignUpAdminComponent } from './sign-up-admin/sign-up-admin.component';
 import { BookappointmentdetailsComponent } from './bookappointmentdetails/bookappointmentdetails.component';
 
 export const routes: Routes = [
-  { path: 'login', component: LoginComponent },
-  { path: 'PatientSignUp', component: SignUpComponent },
-  { path: 'DoctorSignUp', component: SignUpDoctorComponent },
-  { path: 'AdminSignUp', component: SignUpAdminComponent },
+  // { path: 'login', component: LoginComponent },
+  // { path: 'PatientSignUp', component: SignUpComponent },
+  // { path: 'DoctorSignUp', component: SignUpDoctorComponent },
+  // { path: 'AdminSignUp', component: SignUpAdminComponent },
   {
     path: 'Home', component: HomeComponent,
     children: [
@@ -63,8 +63,8 @@ export const routes: Routes = [
       { path: 'Bookappointmentdetails', component: BookappointmentdetailsComponent },
       { path: 'logout', component: LogoutComponent },
     ],
-    canActivate: [authGuard]
+    // canActivate: [authGuard]
   },
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
-  { path: '**', redirectTo: '/login' }
+  { path: '', redirectTo: '/Home/dashboard', pathMatch: 'full' },
+  { path: '**', redirectTo: '/Home/dashboard' }
 ];

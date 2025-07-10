@@ -1,7 +1,14 @@
+.container-fluid{
+    user-select: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+
 .cardData {
     border-radius: 30px;
     margin-top: 15px;
     margin-bottom: 15px;
+    background-color: #252525;
+    color: #FFF;
 }
 
 .cardbodyData {

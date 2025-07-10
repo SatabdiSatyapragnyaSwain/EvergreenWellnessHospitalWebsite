@@ -11,32 +11,34 @@ import { RouterModule } from '@angular/router';
 })
 export class HeaderbarComponent {
 
-  constructor(private router: Router) {}
+ isNavbarVisible = false;
 
-  isNavbarVisible: boolean = false;
+  constructor(private router: Router) {}
 
   toggleNavbar() {
     this.isNavbarVisible = !this.isNavbarVisible;
-  }
-
-  isChildRouteActive(routes: string[]): boolean {
-    return routes.some(route => this.router.url.includes(route));
+    const hamburger = document.querySelector('.hamburger');
+    if (hamburger) {
+      hamburger.classList.toggle('active');
+    }
   }
 
   onNavItemClick() {
     this.isNavbarVisible = false;
+    const hamburger = document.querySelector('.hamburger');
+    if (hamburger) {
+      hamburger.classList.remove('active');
+    }
   }
 
-  @HostListener('document:click', ['$event'])
-  onDocumentClick(event: MouseEvent) {
-    const targetElement = event.target as HTMLElement;
+  isChildRouteActive(routes: string[]): boolean {
+    return routes.some(route => this.router.isActive(route, { paths: 'exact', queryParams: 'exact', fragment: 'ignored', matrixParams: 'ignored' }));
+  }
 
-    if (
-      this.isNavbarVisible &&
-      !targetElement.closest('.navbar') &&
-      !targetElement.closest('.hamburger')
-    ) {
-      this.isNavbarVisible = false;
+  toggleDropdown(event: Event) {
+    const dropdown = (event.target as HTMLElement).parentElement;
+    if (dropdown && window.innerWidth <= 768) {
+      dropdown.classList.toggle('active');
     }
   }
 }

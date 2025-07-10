@@ -9,7 +9,7 @@
     </li>
     <li class="dropdown"
       [class.active]="isChildRouteActive(['/Home/Ouridentity', '/Home/Ourinfrastructure', '/Home/clientsay'])">
-      <a>About Us</a>
+      <a (click)="toggleDropdown($event)">About Us</a>
       <ul class="dropdown-menu">
         <li><a routerLink="/Home/Ouridentity" routerLinkActive="active" (click)="onNavItemClick()">Our Identity</a></li>
         <li><a routerLink="/Home/Ourinfrastructure" routerLinkActive="active" (click)="onNavItemClick()">Our Infrastructure</a></li>
@@ -18,7 +18,7 @@
     </li>
     <li class="dropdown"
       [class.active]="isChildRouteActive(['/Home/GeneralLaparoscopic', '/Home/ENT', '/Home/Neurosurgery', '/Home/Orthopedics', '/Home/Skin&Cosmetology', '/Home/Urology', '/Home/Gastroenterology', '/Home/Medicine&Cardiology', '/Home/Physiotherapy', '/Home/Gynaecology&Obstetrics', '/Home/Cosmetic&Reconstruc', '/Home/Ophthalmology', '/Home/Diagnostic', '/Home/Psychiatrist'])">
-      <a>Department</a>
+      <a (click)="toggleDropdown($event)">Department</a>
       <ul class="dropdown-menu">
         <li><a routerLink="/Home/GeneralLaparoscopic" routerLinkActive="active" (click)="onNavItemClick()">General & Laparoscopic</a></li>
         <li><a routerLink="/Home/ENT" routerLinkActive="active" (click)="onNavItemClick()">ENT</a></li>

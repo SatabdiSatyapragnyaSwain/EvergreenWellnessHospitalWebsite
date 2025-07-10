@@ -1,3 +1,8 @@
+.container {
+    user-select: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+
 .card {
     border-radius: 10px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
@@ -23,6 +28,7 @@
         opacity: 0;
         transform: scale(0.9);
     }
+
     100% {
         opacity: 1;
         transform: scale(1);
@@ -41,7 +47,7 @@
 }
 
 .col-md-6.data {
-    background-color: rgb(249, 246, 242);
+    color: #FFF;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
@@ -87,14 +93,15 @@
     border-collapse: collapse;
     margin-top: 20px;
     border-radius: 10px;
-    overflow: hidden; 
+    overflow: hidden;
+    color: #FFF;
 }
 
 .opd-timing-table th,
 .opd-timing-table td {
     padding: 10px;
     text-align: center;
-    border: 1px solid #ddd;
+    border: 2px solid teal;
 }
 
 .opd-timing-table th {
@@ -108,13 +115,13 @@
 }
 
 .opd-timing-table tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #333232;
 }
 
 .btn-view {
     background-color: teal;
     color: white;
-    padding: 5px 10px; 
+    padding: 5px 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -125,4 +132,3 @@
     background-color: darkcyan;
     color: white;
 }
-
