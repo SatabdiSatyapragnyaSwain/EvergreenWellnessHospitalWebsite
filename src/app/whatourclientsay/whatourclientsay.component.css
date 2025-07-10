@@ -1,3 +1,8 @@
+.container{
+    user-select: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+
 .review-card {
     border: none;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
@@ -5,7 +10,9 @@
     padding: 20px;
     animation: slideIn 1s ease-out forwards;
     opacity: 0;
-    background-color:lightyellow;
+    background-color:#282828;
+    color: #FFF;
+    border: 2px solid teal;
 }
 
 @keyframes slideIn {
@@ -48,4 +55,8 @@
 
 .stars .far {
     color: #e0e0e0;
+}
+
+.col-md-4{
+    margin-top: 15px;
 }
