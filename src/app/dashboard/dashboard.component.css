@@ -1,0 +1,131 @@
+/* Slider CSS Start */
+
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: max-content;
+  margin: auto;
+  overflow: hidden;
+  height: 650px;
+}
+
+.carousel-slide {
+  display: none;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.carousel-slide.active {
+  display: block;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+
+.text-overlay {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #000;
+  font-size: 2rem;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 1s ease-in, transform 1s ease-in;
+  border-radius: 10px;
+}
+
+.carousel-slide.active .text-overlay {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.mySlider {
+  padding: 5px;
+  width: max-content;
+  height: max-content;
+  background: red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-name: slider;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-fill-mode: both;
+  z-index: 10;
+}
+
+@keyframes slider {
+  from {
+    top: 0px;
+    background-color: #FFF;
+  }
+
+  to {
+    top: 200px;
+    background-color: #FFF;
+  }
+}
+
+/* Slider CSS END */
+
+/* Department CSS Start */
+
+.card {
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  animation: slideIn 1s ease-out forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.7);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.btncolr {
+  color: #FFF;
+  background-color: #f0ad4e;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btncolr:hover {
+  background-color: #d9534f;
+}
+
+/* Department CSS END */

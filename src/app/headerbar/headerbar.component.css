@@ -1,0 +1,148 @@
+/* Navbar container */
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: teal;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+}
+
+/* Logo */
+img{
+  height: 70px;
+  width: 80px;
+}
+
+.logo a {
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFF;
+  text-decoration: none;
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 0 10px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #FFF;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.nav-links a:hover {
+  background-color: #f0f0f0;
+  color: #000;
+  font-weight: bold;
+}
+
+.active {
+  background-color: #f0f0f0;
+  color: #000 !important;
+  font-weight: bold;
+}
+
+.dropdown.active > a {
+  background-color: #f0f0f0;
+  color: #000;
+  font-weight: bold;
+}
+
+/* Dropdown menus */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1002;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: none;
+  list-style: none;
+  padding: 10px 0;
+  min-width: max-content;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+
+/* Dropdown links */
+.dropdown-menu li {
+  padding: 5px 20px;
+}
+
+.dropdown-menu li a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Appointment button */
+.btn-appointment {
+  background-color: yellow;
+  color: #000 !important;
+  padding: 10px 20px !important;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-appointment:hover {
+  background-color: rgb(185, 244, 129) !important;
+  color: #000 !important;
+}
+
+/* Hamburger menu for smaller screens */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  background: #333;
+  height: 3px;
+  margin: 4px 0;
+  width: 25px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: teal;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    z-index: 1001;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}

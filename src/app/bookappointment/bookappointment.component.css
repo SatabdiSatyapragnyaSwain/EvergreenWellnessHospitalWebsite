@@ -1,0 +1,112 @@
+.appointment-form-container {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 700px;
+    margin: 40px auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #084c61;
+}
+
+.appointment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input,
+select,
+textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #32a8a6;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.gender-options {
+    display: flex;
+    gap: 15px;
+}
+
+.gender-options label {
+    font-size: 1rem;
+    font-weight: normal;
+    color: #333;
+}
+
+.btn-submit {
+    background-color: #084c61;
+    color: #fff;
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #067c94;
+}
+
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched {
+    border: 2px solid red;
+}
+
+input.ng-valid.ng-touched,
+textarea.ng-valid.ng-touched,
+select.ng-valid.ng-touched {
+    border: 2px solid green;
+}
+
+.error-message {
+    color: red;
+    font-size: 15px;
+}
+
+.Checkappointment {
+    background-color: teal;
+    color: #FFF !important;
+    padding: 10px 20px !important;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.Checkappointment:hover {
+    background-color: teal !important;
+    color: #FFF !important;
+}

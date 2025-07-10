@@ -1,0 +1,89 @@
+.social-icon {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 24px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.insta-icon {
+    color: #f64281;
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.whatup-icon {
+    color: #10ed35;
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #0056b3;
+}
+
+.insta-icon:hover {
+    color: #f6055a;
+}
+.whatup-icon:hover {
+    color: #03e128;
+}
+
+.address-icon {
+    color: #f24093;
+}
+
+.address-icon {
+    color: #f24093;
+}
+
+.phone-icon {
+    color: #007bff;
+}
+
+.email-icon {
+    color: #D14836;
+}
+
+.pbig{
+    font-size: 24px
+}
+
+.psmall{
+    font-size: 17px
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+input.ng-invalid.ng-touched, 
+textarea.ng-invalid.ng-touched, 
+select.ng-invalid.ng-touched {
+  border: 2px solid red;
+}
+
+input.ng-valid.ng-touched, 
+textarea.ng-valid.ng-touched, 
+select.ng-valid.ng-touched {
+  border: 2px solid green;
+}
+
+.error-message {
+  color: red;
+  font-size: 15px;
+}

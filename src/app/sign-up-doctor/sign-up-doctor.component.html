@@ -1,0 +1,190 @@
+<div class="signup-container">
+    <div class="background-icons">
+        <i class="fas fa-stethoscope"></i>
+        <i class="fas fa-heartbeat"></i>
+        <i class="fas fa-user-md"></i>
+        <i class="fas fa-clinic-medical"></i>
+        <i class="fas fa-hospital"></i>
+        <i class="fas fa-syringe"></i>
+        <i class="fas fa-ambulance"></i>
+        <i class="fas fa-pills"></i>
+        <i class="fas fa-notes-medical"></i>
+        <i class="fas fa-procedures"></i>
+        <i class="fas fa-wheelchair"></i>
+        <i class="fas fa-thermometer"></i>
+        <i class="fas fa-x-ray"></i>
+        <i class="fas fa-band-aid"></i>
+        <i class="fas fa-diagnoses"></i>
+        <i class="fas fa-flask"></i>
+        <i class="fas fa-first-aid"></i>
+        <i class="fas fa-vials"></i>
+        <i class="fas fa-tablets"></i>
+        <i class="fas fa-stethoscope"></i>
+        <i class="fas fa-heartbeat"></i>
+        <i class="fas fa-user-md"></i>
+        <i class="fas fa-clinic-medical"></i>
+        <i class="fas fa-hospital"></i>
+        <i class="fas fa-syringe"></i>
+        <i class="fas fa-ambulance"></i>
+        <i class="fas fa-pills"></i>
+        <i class="fas fa-notes-medical"></i>
+        <i class="fas fa-procedures"></i>
+        <i class="fas fa-wheelchair"></i>
+        <i class="fas fa-thermometer"></i>
+        <i class="fas fa-x-ray"></i>
+        <i class="fas fa-band-aid"></i>
+        <i class="fas fa-diagnoses"></i>
+        <i class="fas fa-flask"></i>
+        <i class="fas fa-first-aid"></i>
+        <i class="fas fa-vials"></i>
+        <i class="fas fa-tablets"></i>
+        <i class="fas fa-hospital"></i>
+        <i class="fas fa-syringe"></i>
+        <i class="fas fa-ambulance"></i>
+        <i class="fas fa-pills"></i>
+        <i class="fas fa-notes-medical"></i>
+        <i class="fas fa-procedures"></i>
+        <i class="fas fa-wheelchair"></i>
+        <i class="fas fa-thermometer"></i>
+        <i class="fas fa-x-ray"></i>
+        <i class="fas fa-pills"></i>
+        <i class="fas fa-notes-medical"></i>
+        <i class="fas fa-procedures"></i>
+        <i class="fas fa-wheelchair"></i>
+        <i class="fas fa-thermometer"></i>
+        <i class="fas fa-x-ray"></i>
+    </div>
+
+    <div class="signup-form">
+        <div class="logo-container">
+            <img src="../../assets/Logo1.png" class="ImageLogo" />
+            <p>Evergreen Wellness Hospital</p>
+            <div class="Patient mt-2">
+                <p>Doctor Registration</p>
+            </div>
+        </div>
+        <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="input-group">
+                  <label for="Name">Full Name</label>
+                  <input type="text" id="Name" formControlName="Name" placeholder="Enter Full Name" />
+                  <div *ngIf="f['Name'].touched && f['Name'].invalid" class="error-message">
+                    <small *ngIf="f['Name'].hasError('required')">Full Name is required.</small>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="input-group">
+                  <label for="UserName">User Name</label>
+                  <input type="text" id="UserName" formControlName="UserName" placeholder="Enter User Name" />
+                  <div *ngIf="f['UserName'].touched && f['UserName'].invalid" class="error-message">
+                    <small *ngIf="f['UserName'].hasError('required')">Username is required.</small>
+                    <small *ngIf="f['UserName'].hasError('minlength')">Username must be at least 4 characters.</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="input-group">
+                  <label for="EmailID">Email</label>
+                  <input type="email" id="EmailID" formControlName="EmailID" placeholder="Enter Email" />
+                  <div *ngIf="f['EmailID'].touched && f['EmailID'].invalid" class="error-message">
+                    <small *ngIf="f['EmailID'].hasError('required')">Email is required.</small>
+                    <small *ngIf="f['EmailID'].hasError('email')">Please enter a valid email address.</small>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="input-group">
+                  <label for="PhoneNumber">Phone Number</label>
+                  <input type="tel" id="PhoneNumber" formControlName="PhoneNumber" maxlength="10" (input)="restrictPhoneNumber($event)" placeholder="Enter Phone Number" />
+                  <div *ngIf="f['PhoneNumber'].touched && f['PhoneNumber'].invalid" class="error-message">
+                    <small *ngIf="f['PhoneNumber'].hasError('required')">Phone number is required.</small>
+                    <small *ngIf="f['PhoneNumber'].hasError('pattern')">Please enter a valid 10-digit phone number.</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="input-group">
+                  <label for="Password">Password</label>
+                  <input type="password" id="Password" formControlName="Password" placeholder="Enter Password" />
+                  <div *ngIf="f['Password'].touched && f['Password'].invalid" class="error-message">
+                    <small *ngIf="f['Password'].hasError('required')">Password is required.</small>
+                    <small *ngIf="f['Password'].hasError('minlength')">Password must be at least 8 characters long.</small>
+                    <small *ngIf="f['Password'].hasError('pattern')">Password must contain at least one uppercase letter and one special character.</small>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="input-group">
+                  <label for="confirmPassword">Confirm Password</label>
+                  <input type="password" id="confirmPassword" formControlName="confirmPassword" placeholder="Confirm Password" />
+                  <div *ngIf="f['confirmPassword'].touched && f['confirmPassword'].invalid" class="error-message">
+                    <small *ngIf="f['confirmPassword'].hasError('required')">Confirm Password is required.</small>
+                  </div>
+                  <div *ngIf="signupForm.errors?.['match'] && f['confirmPassword'].touched" class="error-message">
+                    <small>Passwords must match.</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="input-group">
+                  <label for="HospID">Hospital ID</label>
+                  <input type="text" id="HospID" formControlName="HospID" placeholder="Enter Hospital ID" />
+                  <div *ngIf="f['HospID'].touched && f['HospID'].invalid" class="error-message">
+                    <small *ngIf="f['HospID'].hasError('required')">Hospital ID is required.</small>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="input-group">
+                  <label for="DeptID">Select Department</label>
+                  <select id="DeptID" formControlName="DeptID">
+                    <option value="" disabled selected>Select a department</option>
+                    <option *ngFor="let dept of Department" [value]="dept.DepartmentID">{{ dept.DepartmentName }}</option>
+                  </select>
+                  <div *ngIf="f['DeptID'].touched && f['DeptID'].invalid" class="error-message">
+                    <small *ngIf="f['DeptID'].hasError('required')">Department selection is required.</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="input-group">
+                  <label for="DoctQualification">Doctor Qualification</label>
+                  <input type="text" id="DoctQualification" formControlName="DoctQualification" placeholder="Enter Doctor Qualification" />
+                  <div *ngIf="f['DoctQualification'].touched && f['DoctQualification'].invalid" class="error-message">
+                    <small *ngIf="f['DoctQualification'].hasError('required')">Doctor Qualification is required.</small>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="input-group">
+                  <label for="DoctSpecialization">Doctor Specialization</label>
+                  <input type="text" id="DoctSpecialization" formControlName="DoctSpecialization" placeholder="Enter Doctor Specialization" />
+                  <div *ngIf="f['DoctSpecialization'].touched && f['DoctSpecialization'].invalid" class="error-message">
+                    <small *ngIf="f['DoctSpecialization'].hasError('required')">Doctor Specialization is required.</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-md-6">
+                <div class="action-buttons">
+                  <button type="submit" class="btn">Sign Up</button>
+                </div>
+              </div>
+            </div>
+            <div class="sign-in-option">
+              <p>Already have an account? <a routerLink="/Login">Login</a></p>
+            </div>
+          </form>
+    </div>
+</div>

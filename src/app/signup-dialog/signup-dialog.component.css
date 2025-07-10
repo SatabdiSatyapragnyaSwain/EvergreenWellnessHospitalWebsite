@@ -1,0 +1,58 @@
+.container {
+    padding: 20px;
+    text-align: center;
+    max-height: 90vh;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.h2Back{
+    background-color: teal; 
+    padding: 10px; color: #FFF; 
+    border-radius: 10px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.card {
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.btn {
+    background-color: teal;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: teal;
+}

@@ -1,0 +1,103 @@
+<div class="appointment-form-container">
+    <h2 class="form-title">Book an Appointment</h2>
+    <div class="text-end">
+        <button class="btn Checkappointment" [routerLink]="['/Home/Bookappointmentdetails']" [queryParams]="{ userID: userID }">Check Your Appointment</button>
+    </div>
+    <form [formGroup]="appointmentForm" (ngSubmit)="onSubmit()" class="appointment-form">
+        <div class="form-group mt-3">
+            <label for="FirstName">First Name</label>
+            <input type="text" id="FirstName" formControlName="FirstName" placeholder="Enter your First name" required>
+            <div *ngIf="f['FirstName'].touched && f['FirstName'].invalid" class="error-message">
+                <small *ngIf="f['FirstName'].hasError('required')">First Name is required.</small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="LastName">Last Name</label>
+            <input type="text" id="LastName" formControlName="LastName" placeholder="Enter your Last name" required>
+            <div *ngIf="f['LastName'].touched && f['LastName'].invalid" class="error-message">
+                <small *ngIf="f['LastName'].hasError('required')">Last Name is required.</small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="DateOfBirth">Date of Birth</label>
+            <input type="date" id="DateOfBirth" formControlName="DateOfBirth" required>
+            <div *ngIf="f['DateOfBirth'].touched && f['DateOfBirth'].invalid" class="error-message">
+                <small *ngIf="f['DateOfBirth'].hasError('required')">Date of Birth is required.</small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Gender">Gender</label>
+            <div class="gender-options">
+                <label><input type="radio" formControlName="Gender" value="male" required> Male</label>
+                <label><input type="radio" formControlName="Gender" value="female" required> Female</label>
+                <label><input type="radio" formControlName="Gender" value="other" required> Other</label>
+            </div>
+            <div *ngIf="f['Gender'].touched && f['Gender'].invalid" class="error-message">
+                <small *ngIf="f['Gender'].hasError('required')">Gender is required.</small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Address">Address</label>
+            <textarea id="Address" formControlName="Address" rows="3" placeholder="Enter your address"
+                required></textarea>
+            <div *ngIf="f['Address'].touched && f['Address'].invalid" class="error-message">
+                <small *ngIf="f['Address'].hasError('required')">Address is required.</small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Email">Email Address</label>
+            <input type="email" id="Email" formControlName="Email" placeholder="Enter your email address" required>
+            <div *ngIf="f['Email'].touched && f['Email'].invalid" class="error-message">
+                <small *ngIf="f['Email'].hasError('required')">Email is required.</small>
+                <small *ngIf="f['Email'].hasError('Email')">Please enter a valid email address.</small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Phone">Phone Number</label>
+            <input type="tel" id="Phone" formControlName="Phone" placeholder="Enter your phone number" required>
+            <div *ngIf="f['Phone'].touched && f['Phone'].invalid" class="error-message">
+                <small *ngIf="f['Phone'].hasError('required')">Phone Number is required.</small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="PreferredDate">Preferred Date</label>
+            <input type="date" id="date" formControlName="PreferredDate" required>
+            <div *ngIf="f['PreferredDate'].touched && f['PreferredDate'].invalid" class="error-message">
+                <small *ngIf="f['PreferredDate'].hasError('required')">Preferred Date is required.</small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="PreferredTime">Preferred Time</label>
+            <input type="time" id="time" formControlName="PreferredTime" required>
+            <div *ngIf="f['PreferredTime'].touched && f['PreferredTime'].invalid" class="error-message">
+                <small *ngIf="f['PreferredTime'].hasError('required')">Preferred Time is required.</small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Department">Select Department</label>
+            <select id="Department" formControlName="Department" required>
+                <option value="" disabled selected>Select a department</option>
+                <option *ngFor="let dept of Department" [value]="dept.DepartmentID">{{ dept.DepartmentName }}</option>
+            </select>
+            <div *ngIf="f['Department'].touched && f['Department'].invalid" class="error-message">
+                <small *ngIf="f['Department'].hasError('required')">Department selection is required.</small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Doctor">Select Doctor</label>
+            <select id="Doctor" formControlName="Doctor" required>
+                <option value="" disabled selected>Select a doctor</option>
+                <option *ngFor="let doct of Doctors" [value]="doct.DoctorID">{{ doct.DoctorName }}</option>
+            </select>
+            <div *ngIf="f['Doctor'].touched && f['Doctor'].invalid" class="error-message">
+                <small *ngIf="f['Doctor'].hasError('required')">Doctor selection is required.</small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="AdditionalMessage">Additional Message</label>
+            <textarea id="AdditionalMessage" formControlName="AdditionalMessage" rows="4"
+                placeholder="Enter additional details (optional)"></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Submit Appointment</button>
+    </form>
+</div>
