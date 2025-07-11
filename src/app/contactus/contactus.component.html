@@ -1,76 +1,65 @@
-<div style="background-color: antiquewhite;">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center mt-5">
-                <p style="font-size: 30px !important;"><b>Contact Us</b></p>
-                <p style="font-size: 20px !important;"><b>We'd love to hear from you! Reach out to us using the
-                        information below.</b></p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center mt-5">
+            <p style="font-size: 30px !important; color: #FFF;"><b>Contact Us</b></p>
+            <p style="font-size: 20px !important; color: #FFF; line-height: 1.5; margin-top: 25px;"><b>We'd love to hear
+                    from you! Reach out to us using the
+                    information below.</b></p>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-md-6 mt-3">
+            <p class="pbig">
+                <span class="address-icon"><i class="fas fa-map-marker-alt"></i></span><b> Address</b>
+            </p>
+            <p style="font-size: 30px; line-height: 1.5; color: #FFF;"><b>Evergreen Wellness Hospital</b></p>
+            <p class="psmall">Nayabazar, Cuttack, Odisha - 123456</p>
+            <p class="pbig">
+                <span class="phone-icon"><i class="fas fa-phone"></i></span><b> Phone</b>
+            </p>
+            <p class="psmall">+1-234-567-890</p>
+            <p class="psmall">+1-890-567-234</p>
+            <p class="psmall">+91-9876543210</p>
+            <p class="pbig">
+                <span class="email-icon"><i class="fas fa-envelope"></i></span><b> Email</b>
+            </p>
+            <p class="psmall">ewhospital&#64;gmail.com</p>
+            <p class="pbig"><b>Follow Us</b></p>
+            <div>
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="insta-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="whatup-icon"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
             </div>
         </div>
-        <div class="row mt-3">
-            <div class="col-md-6">
-                <p class="pbig">
-                    <span class="address-icon"><i class="fas fa-map-marker-alt"></i></span><b> Address</b>
-                </p>
-                <p style="font-size: 30px;"><b>Evergreen Wellness Hospital</b></p>
-                <p class="psmall">Nayabazar, Cuttack, Odisha - 123456</p>
-                <p class="pbig">
-                    <span class="phone-icon"><i class="fas fa-phone"></i></span><b> Phone</b>
-                </p>
-                <p class="psmall">+1-234-567-890</p>
-                <p class="psmall">+1-890-567-234</p>
-                <p class="psmall">+91-9876543210</p>
-                <p class="pbig">
-                    <span class="email-icon"><i class="fas fa-envelope"></i></span><b> Email</b>
-                </p>
-                <p class="psmall">ewhospital&#64;gmail.com</p>
-                <p class="pbig"><b>Follow Us</b></p>
-                <div>
-                    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
-                    <a href="#" class="insta-icon"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="whatup-icon"><i class="fab fa-whatsapp"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                </div>
+        <div class="col-md-6 mb-3 mt-3">
+            <div class="mb-3">
+                <label for="name" class="form-label">Full Name</label>
+                <input type="text" class="form-control" formControlName="Name" id="name" placeholder="Your Name">
             </div>
-            <div class="col-md-6 mb-3">
-                <form [formGroup]="contactusForm" (ngSubmit)="onSubmit()">
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Full Name</label>
-                        <input type="text" class="form-control" formControlName="Name" id="name" placeholder="Your Name">
-                        <div *ngIf="f['Name'].touched && f['Name'].invalid" class="error-message">
-                            <small *ngIf="f['Name'].hasError('required')">Full Name is required.</small>
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" formControlName="EmailID" id="email" placeholder="Your Email">
-                        <div *ngIf="f['EmailID'].touched && f['EmailID'].invalid" class="error-message">
-                            <small *ngIf="f['EmailID'].hasError('required')">Email is required.</small>
-                            <small *ngIf="f['EmailID'].hasError('EmailID')">Please enter a valid email address.</small>
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="Number" class="form-label">Mobile Number</label>
-                        <input type="Number" class="form-control" formControlName="PhoneNumber" id="Number" placeholder="Your Mobile Number">
-                        <div *ngIf="f['PhoneNumber'].touched && f['PhoneNumber'].invalid" class="error-message">
-                            <small *ngIf="f['PhoneNumber'].hasError('required')">Phone Number is required.</small>
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea class="form-control" id="message" formControlName="Massage" rows="3" placeholder="Your Message"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-success">Send Message</button>
-                </form>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" formControlName="EmailID" id="email" placeholder="Your Email">
             </div>
+            <div class="mb-3">
+                <label for="Number" class="form-label">Mobile Number</label>
+                <input type="Number" class="form-control" formControlName="PhoneNumber" id="Number"
+                    placeholder="Your Mobile Number">
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" formControlName="Massage" rows="3"
+                    placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit" class="btn" style="background-color: teal; color: #FFF;">Send Message</button>
         </div>
     </div>
 </div>
 <div class="container">
     <div class="row">
         <div class="col-md-12 text-center mt-5">
-            <p style="font-size: 30px !important;"><b>OUR LOCATION</b></p>
+            <p style="font-size: 30px !important; color: #FFF;"><b>OUR LOCATION</b></p>
         </div>
     </div>
 </div>

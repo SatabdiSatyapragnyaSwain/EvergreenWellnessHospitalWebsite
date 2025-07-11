@@ -1,5 +1,14 @@
+.container{
+    user-select: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+
 p{
     margin: 0 0 0px !important;
+}
+
+.col-md-4{
+    margin-top: 10px;
 }
 
 .headingcolor{

@@ -1,3 +1,8 @@
+.container {
+  user-select: none;
+  font-family: 'Times New Roman', Times, serif;
+}
+
 .card img {
   max-width: 100%;
   height: 500px;
@@ -11,69 +16,77 @@
 }
 
 .col-md-6.text-center {
-    background-color: rgb(250, 238, 223);
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
-    animation: slideRight 1s ease-out forwards;
+  background-color: #282828;
+  color: #FFF;
+  border: 2px solid teal;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  animation: slideRight 1s ease-out forwards;
 }
 
 .col12 {
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
-    animation: slideLeft 1s ease-out forwards;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  animation: slideLeft 1s ease-out forwards;
+}
+
+.col12 p{
+  color: #FFF !important;
 }
 
 @keyframes slideRight {
-    0% {
-      transform: translateX(100%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(0);
-      opacity: 1;
-    }
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .col-md-6.text-center p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #333;
-    margin: 10px 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  margin: 10px 0;
 }
 
 .col12 p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #333;
-    margin: 10px 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  margin: 10px 0;
 }
 
 .col-md-6.text-center span {
-    font-size: 1.4rem;
-    text-transform: uppercase;
+  font-size: 1.4rem;
+  text-transform: uppercase;
 }
 
 .card {
-    border-radius: 10px;
+  border-radius: 10px;
+  opacity: 0;
+  animation: slideLeft 1s ease-out forwards;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(-100%);
     opacity: 0;
-    animation: slideLeft 1s ease-out forwards;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   }
-  
-  @keyframes slideLeft {
-    0% {
-      transform: translateX(-100%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(0);
-      opacity: 1;
-    }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
-  
-  .card:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  }
+}
+
+.card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}

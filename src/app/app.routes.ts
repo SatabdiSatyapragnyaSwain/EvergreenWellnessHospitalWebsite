@@ -1,9 +1,6 @@
 import { Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { LogoutComponent } from './logout/logout.component';
-import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
-import { authGuard } from './auth/auth.guard';
 import { OuridentityComponent } from './ouridentity/ouridentity.component';
 import { OurinfrastructureComponent } from './ourinfrastructure/ourinfrastructure.component';
 import { WhatourclientsayComponent } from './whatourclientsay/whatourclientsay.component';
@@ -24,17 +21,8 @@ import { PsychiatristComponent } from './psychiatrist/psychiatrist.component';
 import { OurdoctorsComponent } from './ourdoctors/ourdoctors.component';
 import { OpdtimingComponent } from './opdtiming/opdtiming.component';
 import { ContactusComponent } from './contactus/contactus.component';
-import { BookappointmentComponent } from './bookappointment/bookappointment.component';
-import { SignUpComponent } from './sign-up/sign-up.component';
-import { SignUpDoctorComponent } from './sign-up-doctor/sign-up-doctor.component';
-import { SignUpAdminComponent } from './sign-up-admin/sign-up-admin.component';
-import { BookappointmentdetailsComponent } from './bookappointmentdetails/bookappointmentdetails.component';
 
 export const routes: Routes = [
-  // { path: 'login', component: LoginComponent },
-  // { path: 'PatientSignUp', component: SignUpComponent },
-  // { path: 'DoctorSignUp', component: SignUpDoctorComponent },
-  // { path: 'AdminSignUp', component: SignUpAdminComponent },
   {
     path: 'Home', component: HomeComponent,
     children: [
@@ -59,11 +47,7 @@ export const routes: Routes = [
       { path: 'OurDoctor', component: OurdoctorsComponent },
       { path: 'OPDTiming', component: OpdtimingComponent },
       { path: 'Contactus', component: ContactusComponent },
-      { path: 'Bookappointment', component: BookappointmentComponent },
-      { path: 'Bookappointmentdetails', component: BookappointmentdetailsComponent },
-      { path: 'logout', component: LogoutComponent },
     ],
-    // canActivate: [authGuard]
   },
   { path: '', redirectTo: '/Home/dashboard', pathMatch: 'full' },
   { path: '**', redirectTo: '/Home/dashboard' }

@@ -2,16 +2,20 @@
     background-color: #084c61;
     color: #f9f9f9;
     padding: 40px 20px;
+    font-family: 'Times New Roman', Times, serif;
+    user-select: none;
 }
 
 .footer h5 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    font-weight: bold;
     margin-bottom: 15px;
     color: #f9f9f9;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .footer p {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     line-height: 1.5;
 }
 

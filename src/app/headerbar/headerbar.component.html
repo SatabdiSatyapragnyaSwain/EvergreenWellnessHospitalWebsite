@@ -12,38 +12,61 @@
       <a (click)="toggleDropdown($event)">About Us</a>
       <ul class="dropdown-menu">
         <li><a routerLink="/Home/Ouridentity" routerLinkActive="active" (click)="onNavItemClick()">Our Identity</a></li>
-        <li><a routerLink="/Home/Ourinfrastructure" routerLinkActive="active" (click)="onNavItemClick()">Our Infrastructure</a></li>
-        <li><a routerLink="/Home/clientsay" routerLinkActive="active" (click)="onNavItemClick()">What Our Clients Say</a></li>
+        <li><a routerLink="/Home/Ourinfrastructure" routerLinkActive="active" (click)="onNavItemClick()">Our
+            Infrastructure</a></li>
+        <li><a routerLink="/Home/clientsay" routerLinkActive="active" (click)="onNavItemClick()">What Our Clients
+            Say</a></li>
       </ul>
     </li>
     <li class="dropdown"
       [class.active]="isChildRouteActive(['/Home/GeneralLaparoscopic', '/Home/ENT', '/Home/Neurosurgery', '/Home/Orthopedics', '/Home/Skin&Cosmetology', '/Home/Urology', '/Home/Gastroenterology', '/Home/Medicine&Cardiology', '/Home/Physiotherapy', '/Home/Gynaecology&Obstetrics', '/Home/Cosmetic&Reconstruc', '/Home/Ophthalmology', '/Home/Diagnostic', '/Home/Psychiatrist'])">
       <a (click)="toggleDropdown($event)">Department</a>
       <ul class="dropdown-menu">
-        <li><a routerLink="/Home/GeneralLaparoscopic" routerLinkActive="active" (click)="onNavItemClick()">General & Laparoscopic</a></li>
+        <li><a routerLink="/Home/GeneralLaparoscopic" routerLinkActive="active" (click)="onNavItemClick()">General &
+            Laparoscopic</a></li>
         <li><a routerLink="/Home/ENT" routerLinkActive="active" (click)="onNavItemClick()">ENT</a></li>
-        <li><a routerLink="/Home/Neurosurgery" routerLinkActive="active" (click)="onNavItemClick()">Neuro Surgery</a></li>
-        <li><a routerLink="/Home/Orthopedics" routerLinkActive="active" (click)="onNavItemClick()">Orthopedics & Trauma</a></li>
-        <li><a routerLink="/Home/Skin&Cosmetology" routerLinkActive="active" (click)="onNavItemClick()">Skin & Cosmetology</a></li>
+        <li><a routerLink="/Home/Neurosurgery" routerLinkActive="active" (click)="onNavItemClick()">Neuro Surgery</a>
+        </li>
+        <li><a routerLink="/Home/Orthopedics" routerLinkActive="active" (click)="onNavItemClick()">Orthopedics &
+            Trauma</a></li>
+        <li><a routerLink="/Home/Skin&Cosmetology" routerLinkActive="active" (click)="onNavItemClick()">Skin &
+            Cosmetology</a></li>
         <li><a routerLink="/Home/Urology" routerLinkActive="active" (click)="onNavItemClick()">Urology</a></li>
-        <li><a routerLink="/Home/Gastroenterology" routerLinkActive="active" (click)="onNavItemClick()">Gastroenterology</a></li>
-        <li><a routerLink="/Home/Medicine&Cardiology" routerLinkActive="active" (click)="onNavItemClick()">Medicine & Cardiology</a></li>
-        <li><a routerLink="/Home/Physiotherapy" routerLinkActive="active" (click)="onNavItemClick()">Physiotherapy</a></li>
-        <li><a routerLink="/Home/Gynaecology&Obstetrics" routerLinkActive="active" (click)="onNavItemClick()">Gynaecology & Obstetrics</a></li>
-        <li><a routerLink="/Home/Cosmetic&Reconstruc" routerLinkActive="active" (click)="onNavItemClick()">Cosmetic & Reconstruc</a></li>
-        <li><a routerLink="/Home/Ophthalmology" routerLinkActive="active" (click)="onNavItemClick()">Ophthalmology</a></li>
+        <li><a routerLink="/Home/Gastroenterology" routerLinkActive="active"
+            (click)="onNavItemClick()">Gastroenterology</a></li>
+        <li><a routerLink="/Home/Medicine&Cardiology" routerLinkActive="active" (click)="onNavItemClick()">Medicine &
+            Cardiology</a></li>
+        <li><a routerLink="/Home/Physiotherapy" routerLinkActive="active" (click)="onNavItemClick()">Physiotherapy</a>
+        </li>
+        <li><a routerLink="/Home/Gynaecology&Obstetrics" routerLinkActive="active"
+            (click)="onNavItemClick()">Gynaecology & Obstetrics</a></li>
+        <li><a routerLink="/Home/Cosmetic&Reconstruc" routerLinkActive="active" (click)="onNavItemClick()">Cosmetic &
+            Reconstruc</a></li>
+        <li><a routerLink="/Home/Ophthalmology" routerLinkActive="active" (click)="onNavItemClick()">Ophthalmology</a>
+        </li>
         <li><a routerLink="/Home/Diagnostic" routerLinkActive="active" (click)="onNavItemClick()">Diagnostic</a></li>
-        <li><a routerLink="/Home/Psychiatrist" routerLinkActive="active" (click)="onNavItemClick()">Psychiatrist</a></li>
+        <li><a routerLink="/Home/Psychiatrist" routerLinkActive="active" (click)="onNavItemClick()">Psychiatrist</a>
+        </li>
       </ul>
     </li>
     <li><a routerLink="/Home/OurDoctor" routerLinkActive="active" (click)="onNavItemClick()">Our Doctors</a></li>
     <li><a routerLink="/Home/OPDTiming" routerLinkActive="active" (click)="onNavItemClick()">OPD Timing</a></li>
     <li><a routerLink="/Home/Contactus" routerLinkActive="active" (click)="onNavItemClick()">Contact Us</a></li>
-    <li><a routerLink="/Home/Bookappointment" class="btn-appointment" (click)="onNavItemClick()">Book Appointment</a></li>
+    <li><a class="btn-appointment" (click)="showPopup()">Book Appointment</a></li>
   </ul>
   <div class="hamburger" (click)="toggleNavbar()">
     <span></span>
     <span></span>
     <span></span>
+  </div>
+  <!-- Popup for Book Appointment -->
+  <div class="popup" [class.show]="isPopupVisible">
+    <div class="popup-content">
+      <p>
+        Let’s get Your wellness journey starts here. Please <a routerLink="/login">LogIn</a> or <a
+          routerLink="/login">SignIn</a> to book your appointment now.
+      </p>
+      <button class="popup-close" (click)="hidePopup()">Close</button>
+    </div>
   </div>
 </nav>

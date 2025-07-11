@@ -10,8 +10,8 @@ import { RouterModule } from '@angular/router';
   imports: [RouterModule],
 })
 export class HeaderbarComponent {
-
- isNavbarVisible = false;
+  isNavbarVisible = false;
+  isPopupVisible = false;
 
   constructor(private router: Router) {}
 
@@ -32,7 +32,14 @@ export class HeaderbarComponent {
   }
 
   isChildRouteActive(routes: string[]): boolean {
-    return routes.some(route => this.router.isActive(route, { paths: 'exact', queryParams: 'exact', fragment: 'ignored', matrixParams: 'ignored' }));
+    return routes.some((route) =>
+      this.router.isActive(route, {
+        paths: 'exact',
+        queryParams: 'exact',
+        fragment: 'ignored',
+        matrixParams: 'ignored',
+      }),
+    );
   }
 
   toggleDropdown(event: Event) {
@@ -40,5 +47,14 @@ export class HeaderbarComponent {
     if (dropdown && window.innerWidth <= 768) {
       dropdown.classList.toggle('active');
     }
+  }
+
+  showPopup() {
+    this.isPopupVisible = true;
+    this.isNavbarVisible = false;
+  }
+
+  hidePopup() {
+    this.isPopupVisible = false;
   }
 }
