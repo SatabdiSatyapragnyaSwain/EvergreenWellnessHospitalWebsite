@@ -56,5 +56,6 @@ export class HeaderbarComponent {
 
   hidePopup() {
     this.isPopupVisible = false;
+    this.onNavItemClick();
   }
 }
